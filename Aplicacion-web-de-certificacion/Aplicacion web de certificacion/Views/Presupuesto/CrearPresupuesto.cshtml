@@ -1,0 +1,179 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Presupuesto
+
+@{
+    ViewData["Title"] = "CrearPresupuesto";
+
+}
+
+<div class="panel panel-primary" style="">
+    <!--box header-->
+    <div class="panel-heading">
+        <table align="center"><tr><td><h3>Nuevo Presupuesto</h3></td></tr></table>
+    </div><!--/box header-->
+
+
+    <div class="row-fluid">
+        <div class="span12">
+            <form action="GuardarPresupuesto" class="form-horizontal" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="box corner-all">
+                    <!--box body-->
+                    <div class="panel-body">
+                        <div class="row-fluid">
+                            <!--element-->
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="row-fluid">
+                                        <div class="col-md-4">
+                                            <div class="editor-label">
+                                                <label asp-for="DropdownCliente" class="control-label">Cliente</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.DropDownList("DropdownCliente", new SelectList(ViewBag.ListadoEntidad, "IdEntidades", "RazonSocial"), "Selecciona un Cliente", new { @id = "DropdownCliente", @class = "form-control" })
+
+                                                <span asp-validation-for="DropdownCliente" class="text-danger"></span>
+
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="Contacto" class="control-label">Contacto</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.DropDownList("ListarContactos", new SelectList(""), "Selecciona un Contacto del Cliente", new { @id = "IdContactoEntidad", @class = "form-control" })
+
+                                                <input asp-for="Contacto" class="form-control" id="txtContactoEntidadx" type="hidden" />
+                                                <span asp-validation-for="Contacto" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="SegmentoVenta" class="control-label">Segmento Venta</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="SegmentoVenta" class="form-control" />
+                                                <span asp-validation-for="SegmentoVenta" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="CondicionVenta" class="control-label">Condición Venta</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="CondicionVenta" class="form-control" />
+                                                <span asp-validation-for="CondicionVenta" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-4">
+                                            <div class="editor-label">
+                                                <label asp-for="DropdownClienteAsociado" class="control-label">Cliente Asociado</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.DropDownList("DropdownClienteAsociado", new SelectList(ViewBag.ListadoEntidad, "IdEntidades", "RazonSocial"), new { @id = "DropdownClienteAsociado", @class = "form-control" })
+                                                <input asp-for="ClienteAsociado" id="txtClienteAsociado" type="hidden" class="form-control" />
+                                                <span asp-validation-for="DropdownClienteAsociado" class="text-danger"></span>
+
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="ListarContactosAsociados" class="control-label">Cliente Asociado</label>
+                                            </div>
+
+                                            <div class="editor-field">
+                                                @Html.DropDownList("ListarContactosAsociados", new SelectList(""), "Selecciona Contacto", new { @id = "IdContactosAsociados", @class = "form-control" })
+                                                <input asp-for="ContactoAsociado" id="txtContactoAsociado" type="hidden" class="form-control" />
+                                                <span asp-validation-for="ListarContactosAsociados" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="editor-field">
+                                                <label asp-for="FechaCreacion" class="control-label">Fecha Alta</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="FechaCreacion" class="form-control" />
+                                                <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-4">
+                                            <div class="editor-field">
+                                                <label asp-for="ClienteFacturacionPais" class="control-label">Cliente Factura</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="ClienteFacturacionPais" class="form-control" />
+                                                <span asp-validation-for="ClienteFacturacionPais" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-field">
+                                                <label asp-for="ContactoClienteFacturacionPais" class="control-label">Contacto Factura</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="ContactoClienteFacturacionPais" class="form-control" />
+                                                <span asp-validation-for="ContactoClienteFacturacionPais" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-field">
+                                                <label asp-for="PaisFacturacion" class="control-label">País Facturación</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="PaisFacturacion" class="form-control" />
+                                                <span asp-validation-for="PaisFacturacion" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <div class="pull-right">
+                                    <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+                                    <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
+                                </div>
+                            </div>
+
+                            <!--/element-->
+                        </div>
+                    </div><!--/box body-->
+                </div>
+                @*Espacio para los input de id que estarán ocultos*@
+                <input asp-for="Usuarios_IdUsuarios" class="form-control" id="idUsuarios" contenteditable="false" type="hidden" />
+                <input asp-for="Cliente" id="txtCliente" type="hidden" class="form-control" />
+
+
+                <input asp-for="entidades_IdEntidades" id="idEntidades" class="form-control" contenteditable="false" type="hidden" />
+                <input asp-for="IdPresupuestos" class="form-control" contenteditable="false" type="hidden" />
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/CrearPresupuesto.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#DropdownCliente").click(function () {
+                $.get("/Presupuesto/getContactsList", { IdEntidades: $("#DropdownCliente").val() }, function (data) {
+                    $("#IdContactoEntidad").empty();
+                    $.each(data, function (index, row) {
+                        $("#IdContactoEntidad").append("<option value='" + row.idContactoEntidad + "'>" + row.emailRepresentante + "</option>")
+                    });
+                });
+            })
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#DropdownClienteAsociado").click(function () {
+                $.get("/Presupuesto/getContactsList", { IdEntidades: $("#DropdownClienteAsociado").val() }, function (data) {
+                    $("#IdContactosAsociados").empty();
+                    $.each(data, function (index, row) {
+                        $("#IdContactosAsociados").append("<option value='" + row.idContactoEntidad + "'>" + row.emailRepresentante + "</option>")
+                    });
+                });
+            })
+
+        });
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

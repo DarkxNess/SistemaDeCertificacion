@@ -1,0 +1,71 @@
+﻿@model Aplicacion_web_de_certificacion.Models.PedidoEnsayo
+@{
+    ViewData["Title"] = "PasarStatus";
+}
+
+<div class="tab-pane fade active in">
+    <table class="table table-bordered table-condensed invoice">
+        <thead>
+            <tr>
+                <th colspan="5">
+
+                    Producto / Norma
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5">
+
+                        @Model.ProductosLista[0].Descripcion - @Model.ProtocoloAplicable - @Model.ProductosLista[0].NormaProducto
+                </td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>Fecha de Alta</th>
+                <th>Descripción del ensayo / Servicio</th>
+                <th>Producto / Cantidad</th>
+                <th>Marca</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>11/07/2018</td>
+                <td colspan="1">
+                    @Model.CotizacionesLista[0].NombreCotizacion
+
+                </td>
+                <td> @Model.ProductosLista[0].NombreProducto / @Model.CotizacionesLista[0].CantidadProductos </td>
+                <td>@Model.ProductosLista[0].MarcaProducto</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Justificación de la familia</th>
+                <th>Otra Info. Relevante</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.ProductosLista[0].ModeloProducto</td>
+                <td>@Model.ProductosLista[0].FamiliaProducto</td>
+                <td></td>
+                <td>@Model.PresupuestoLista[0].ComercialAsignado</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>Numero SEC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.NumeroSec</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+

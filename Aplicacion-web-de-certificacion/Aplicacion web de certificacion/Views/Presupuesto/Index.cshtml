@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Aplicacion_web_de_certificacion.Models.Presupuesto>
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+
+    ViewData["Title"] = "Index";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <table align="center"><tr><td><h2>Presupuestos</h2></td></tr></table>
+    </div>
+    <div class="table-responsive ">
+
+        @if (User.IsInRole("Comercial") || User.IsInRole("Admin"))
+        {
+            <p class="alertify-button-ok">
+                <table align="center"><tr><td align="center"> <a asp-action="CrearPresupuesto" asp-area="Agregar" class=""><i class="fas fa-plus-circle fa-3x"></i></a></td></tr><tr><td>Agregar</td></tr></table>
+            </p>
+        }
+            <table id="grid" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Editar</th>
+
+                        <th>
+                            Comercial Asignado / Alta
+                        </th>
+
+                        <th>
+                            Cliente / Contacto
+                        </th>
+
+                        @*<th>
+                            Segmento de Venta
+                        </th>*@
+                        <th>
+                            Condición Venta
+                        </th>
+
+                        @*<th>
+                            VendedorAsignado
+                        </th>*@
+                        <th>
+                            Cliente Asociado / Contacto
+                        </th>
+
+                        <th>
+                            País Fact.
+                        </th>
+                        <th>
+                            Cliente Facturación / Contacto
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="success">
+                                <form asp-controller="Presupuesto" asp-action="EditarPresupuesto" class="form-horizontal">
+                                    <input asp-for="@item.IdPresupuestos" name="IdPresupuestos" class="form-control" contenteditable="false" type="hidden" />
+
+                                    <button type="submit" class="btn btn-mini btn-primary"> # @item.IdPresupuestos</button>
+                                </form>
+                            </td>
+
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ComercialAsignado) <br /> @Html.DisplayFor(modelItem => item.FechaCreacion2)
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cliente) <br /> @Html.DisplayFor(modelItem => item.Contacto)
+                            </td>
+
+                            @*<td>
+                                @Html.DisplayFor(modelItem => item.SegmentoVenta)
+                            </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CondicionVenta)
+                            </td>
+                            @*<td>
+                                @Html.DisplayFor(modelItem => item.VendedorAsignado)
+                            </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ClienteAsociado) <br /> @Html.DisplayFor(modelItem => item.ContactoAsociado)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PaisFacturacion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ClienteFacturacionPais) <br /> @Html.DisplayFor(modelItem => item.ContactoClienteFacturacionPais)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.StatusPresupuesto)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+</div>

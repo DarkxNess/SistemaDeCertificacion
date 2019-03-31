@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Aplicación de Certificación</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="page-wrapper" style="margin: 0 0 0 0 !important;">
+            <!-- /.row -->
+
+            <div class="row">
+                @RenderBody()
+            </div>
+            <hr />
+            <footer>
+                <p><table align="center"><tr><th align="center">&copy; 2019 - Powered By DarkNess</th></tr><tr><th align="center"><img width="150" height="100" src="~/images/logo.png" />Aqui va tu logo</th></tr></table></p>
+            </footer>
+
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    @section Scripts {
+        <script>https://code.jquery.com/jquery-3.3.1.js</script>
+        <script>https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js</script>
+        <script>https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js</script>
+        @RenderSection("Scripts", required: false)
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#contenidotabla').DataTable();
+            });
+        </script>
+        }
+    </body>
+</html>

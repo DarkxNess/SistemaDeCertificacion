@@ -1,0 +1,24 @@
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.deps.json
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.runtimeconfig.json
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.runtimeconfig.dev.json
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.csprojAssemblyReference.cache
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.csproj.CoreCompileInputs.cache
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfoInputs.cache
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfo.cs
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
+D:\21-07-2018 aplicacion web casi final\21-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.deps.json
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.runtimeconfig.json
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.runtimeconfig.dev.json
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.csprojAssemblyReference.cache
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfoInputs.cache
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfo.cs
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
+C:\Users\HOME\Desktop\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Release\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb
