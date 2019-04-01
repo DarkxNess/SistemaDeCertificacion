@@ -13741,11 +13741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DarkNess\\Downloads\\Aplicacion-web-de-certificacion\\Aplicacion web de certificacion\\Aplicacion web de certificacion\\Aplicacion_web_de_certificacion.csproj",
+      "projectUniqueName": "C:\\Users\\DarkNess\\Downloads\\GitHub\\SistemaDeCertificacion\\Aplicacion-web-de-certificacion\\Aplicacion web de certificacion\\Aplicacion_web_de_certificacion.csproj",
       "projectName": "Aplicacion_web_de_certificacion",
-      "projectPath": "C:\\Users\\DarkNess\\Downloads\\Aplicacion-web-de-certificacion\\Aplicacion web de certificacion\\Aplicacion web de certificacion\\Aplicacion_web_de_certificacion.csproj",
+      "projectPath": "C:\\Users\\DarkNess\\Downloads\\GitHub\\SistemaDeCertificacion\\Aplicacion-web-de-certificacion\\Aplicacion web de certificacion\\Aplicacion_web_de_certificacion.csproj",
       "packagesPath": "C:\\Users\\DarkNess\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DarkNess\\Downloads\\Aplicacion-web-de-certificacion\\Aplicacion web de certificacion\\Aplicacion web de certificacion\\obj\\",
+      "outputPath": "C:\\Users\\DarkNess\\Downloads\\GitHub\\SistemaDeCertificacion\\Aplicacion-web-de-certificacion\\Aplicacion web de certificacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -178,3 +178,15 @@ C:\Users\DarkNess\Downloads\Aplicacion-web-de-certificacion\Aplicacion web de ce
 C:\Users\DarkNess\Downloads\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfo.cs
 C:\Users\DarkNess\Downloads\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
 C:\Users\DarkNess\Downloads\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.deps.json
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.runtimeconfig.json
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.runtimeconfig.dev.json
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.csprojAssemblyReference.cache
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.csproj.CoreCompileInputs.cache
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfoInputs.cache
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.AssemblyInfo.cs
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.dll
+C:\Users\DarkNess\Downloads\GitHub\SistemaDeCertificacion\Aplicacion-web-de-certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion_web_de_certificacion.pdb

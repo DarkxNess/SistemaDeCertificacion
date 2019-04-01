@@ -235,6 +235,7 @@ namespace Aplicacion_web_de_certificacion.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
+
                 String str = model.Email;
                 String username = "";
                 for (int n = 0; n < str.Length; n++)
@@ -263,13 +264,35 @@ namespace Aplicacion_web_de_certificacion.Controllers
             return View(model);
         }
 
+        
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-            if (ModelState.IsValid)
+
+
+            String str2 = model.Password;
+            bool upper = false;
+            bool number = false;
+            for (int n = 0; n < str2.Length; n++)
+            {
+                if (char.IsUpper(str2[n]))
+                {
+                    upper = true;
+                }
+              
+
+                if (char.IsNumber(str2[n]))
+                {
+                    number = true;
+                }
+
+            }
+
+            if (ModelState.IsValid && number.Equals(true) && upper.Equals(true))
             {
                 String str = model.Email;
                 String username = "";
@@ -284,9 +307,15 @@ namespace Aplicacion_web_de_certificacion.Controllers
                         username = username + str[n].ToString();
                     }
                 }
+
+
+
+
+
                 var user = new ApplicationUser { UserName = username, Email = model.Email, SecurityStamp = "okey"};
                 var result = await _userManager.CreateAsync(user, model.Password);
                 await _userManager.AddToRoleAsync(user, model.Role);
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
@@ -297,12 +326,19 @@ namespace Aplicacion_web_de_certificacion.Controllers
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
+
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
+            RegisterViewModel R = new RegisterViewModel();
+            R.getRoles(_context);
+            ViewData["ReturnUrl"] = returnUrl;
+            model.Roles = R.Roles;
+            ViewBag.error = "Password debe contener una mayuscula, un numero y un caracter especial";
+            ErrorMessage = "Password debe contener una mayuscula, un numero y un caracter especial";
             return View(model);
         }
 
