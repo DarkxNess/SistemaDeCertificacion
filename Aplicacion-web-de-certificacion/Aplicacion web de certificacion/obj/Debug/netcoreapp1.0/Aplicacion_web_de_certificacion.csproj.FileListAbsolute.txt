@@ -1,4 +1,0 @@
-C:\Users\DarkNess\source\repos\17-07-2018 aplicacion web casi final\17-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp1.0\Aplicacion_web_de_certificacion.csprojAssemblyReference.cache
-C:\Users\DarkNess\source\repos\17-07-2018 aplicacion web casi final\17-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp1.0\Aplicacion_web_de_certificacion.csproj.CoreCompileInputs.cache
-C:\Users\DarkNess\source\repos\17-07-2018 aplicacion web casi final\17-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp1.0\Aplicacion_web_de_certificacion.AssemblyInfoInputs.cache
-C:\Users\DarkNess\source\repos\17-07-2018 aplicacion web casi final\17-07-2018 aplicacion web\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp1.0\Aplicacion_web_de_certificacion.AssemblyInfo.cs

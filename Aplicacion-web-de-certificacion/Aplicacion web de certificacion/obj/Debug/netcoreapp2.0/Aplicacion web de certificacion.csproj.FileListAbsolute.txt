@@ -1,9 +1,0 @@
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion web de certificacion.deps.json
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion web de certificacion.runtimeconfig.json
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion web de certificacion.runtimeconfig.dev.json
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\bin\Debug\netcoreapp2.0\Aplicacion web de certificacion.dll
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion web de certificacion.csprojAssemblyReference.cache
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion web de certificacion.csproj.CoreCompileInputs.cache
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion web de certificacion.AssemblyInfoInputs.cache
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\Aplicacion web de certificacion.AssemblyInfo.cs
-C:\Users\DarkNess\source\repos\Aplicacion web de certificacion\Aplicacion web de certificacion\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
