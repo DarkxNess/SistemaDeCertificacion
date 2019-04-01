@@ -1,0 +1,60 @@
+﻿@model Aplicacion_web_de_certificacion.Models.PedidoEnsayo
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "EmitirCertificado";
+    DateTime fecha = DateTime.Now;
+    String fechax = fecha.Day + "-" + fecha.Month + "-" + fecha.Year;
+}
+
+
+
+<body>
+    <table style="width:100%">
+        <tbody>
+            <tr>
+                <td style="width:20%"><center><img src="http://sistema.lenor.com.ar:88/image/logo2.jpg"></center></td>
+                <td><b>Certificado de Aprobación</b></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br><table style="width:100%" border="1">
+        <tbody>
+            <tr><td width="40%">Número de Certificado</td><td>T @Model.IdPedidoEnsayo</td></tr>
+            <tr><td width="40%">Fecha de pedido</td><td>@fechax</td></tr>
+            <tr><td width="40%">Norma Aplicable</td><td>@Model.ProductosLista[0].NormaProducto</td></tr>
+            <tr><td width="40%">Nombre del Aplicante</td><td>@Model.EntidadesLista[0].RazonSocial</td></tr>
+            <tr><td width="40%">Dirección del Aplicante</td><td>@Model.EntidadesLista[0].Domicilio</td></tr>
+
+        </tbody>
+    </table><br>
+    <table style="width:100%" border="1">
+        <tbody>
+
+            <tr><td width="40%">Denominación</td><td>@Model.ProductosLista[0].NombreProducto</td></tr>
+            <tr><td width="40%">Marca</td><td>@Model.ProductosLista[0].MarcaProducto  </td></tr>
+            <tr><td width="40%">Modelo o Tipo</td><td>@Model.ProductosLista[0].ModeloProducto</td></tr>
+            <tr><td width="40%">Fabricante</td><td>@Model.ProductosLista[0].NombreFabricante</td></tr>
+
+        </tbody>
+    </table>
+    <br><table style="width:100%" border="1">
+        <tbody>
+            <tr><td width="40%">Reporte de Ensayo</td><td>@Model.EnsayosLista[0].NombreEnsayo</td></tr>
+            <tr><td width="40%">Certificadora Emisora</td><td>@Model.EnsayosLista[0].ClienteCertificadora</td></tr>
+            <tr><td width="40%">Dirección Laboratorio</td><td>@Model.EnsayosLista[0].Contacto</td></tr>
+        </tbody>
+    </table>
+
+    <br><table align="center" width="50%" border="1">
+        <tbody>
+            <tr><td width="40%">Firma</td><td>
+    <img src="~/images/firma gabriel.png" width="220" height="150" />
+</td></tr>
+            <tr><td width="40%">Responsable Técnico</td><td>@UserManager.GetUserName(User)</td></tr>
+            <tr><td width="40%">Fecha</td><td>@fechax</td></tr>
+        </tbody>
+    </table>
+</body>

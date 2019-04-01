@@ -1,0 +1,102 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Muestras
+
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    ViewData["Title"] = "CrearMuestra";
+}
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="box corner-all">
+    <!--box body-->
+    <div class="panel-body">
+        <div class="row-fluid">
+            <!--element-->
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <div class="editor-label">
+                                <label asp-for="Producto" class="control-label"></label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="Producto" class="form-control" />
+                                <span asp-validation-for="Producto" class="text-danger"></span>
+                            </div>
+
+                            <div class="editor-label">
+                                <label asp-for="Etiqueta" class="control-label"></label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="Etiqueta" class="form-control" />
+                                <span asp-validation-for="Etiqueta" class="text-danger"></span>
+                            </div>
+                            <div class="editor-label">
+                                <label asp-for="Cantidad" class="control-label"></label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="Cantidad" class="form-control" />
+                                <span asp-validation-for="Cantidad" class="text-danger"></span>
+                            </div>
+
+                            <div class="editor-label">
+                                <label asp-for="Marca" class="control-label"></label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="Marca" class="form-control" />
+                                <span asp-validation-for="Marca" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="pedidoEnsayo_IdPedidoEnsayo" class="form-control" contenteditable="false" type="hidden" />
+                        </div>
+                        <div class="col-md-5">
+
+                            <div class="editor-label">
+                                <label asp-for="Modelo" class="control-label"></label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="Modelo" class="form-control" />
+                                <span asp-validation-for="Modelo" class="text-danger"></span>
+                            </div>
+                            <div class="editor-label">
+                                <label asp-for="Fabricante" class="control-label"></label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="Fabricante" class="form-control" />
+                                <span asp-validation-for="Fabricante" class="text-danger"></span>
+                            </div>
+                            <div class="editor-label">
+                                <label asp-for="PaisOrigen" class="control-label">País de Origen</label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="PaisOrigen" class="form-control" />
+                                <span asp-validation-for="PaisOrigen" class="text-danger"></span>
+                            </div>
+                            <div class="editor-label">
+                                <label asp-for="DestinoMuestras" class="control-label">Destino de Muestras</label>
+                            </div>
+                            <div class="editor-field">
+                                <input asp-for="DestinoMuestras" class="form-control" />
+                                <span asp-validation-for="DestinoMuestras" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

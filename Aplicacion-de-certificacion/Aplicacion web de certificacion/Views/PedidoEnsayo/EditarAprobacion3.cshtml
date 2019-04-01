@@ -1,0 +1,48 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Aprobacion
+
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+    ViewData["Title"] = "EditarAprobacion3";
+}
+
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="box corner-all">
+    <!--box body-->
+    <div class="panel-body">
+        <div class="row-fluid">
+            <!--element-->
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <div class="row">
+
+                        <div class="col-md-1">
+                            <input asp-for="IdAprobacion" class="form-control" contenteditable="false" type="hidden" />
+                            <input asp-for="PedidoEnsayo_IdPedidoEnsayo" class="form-control" contenteditable="false" type="hidden" />
+
+                        </div>
+                        <div class="col-md-11">
+
+                            <div class="editor-label">
+    <label asp-for="ComentariosAprobacion" class="control-label">Comentarios de Aprobación</label>                           </div>
+                            <div class="editor-field">
+                                <input asp-for="ComentariosAprobacion" class="form-control" />
+                                <span asp-validation-for="ComentariosAprobacion" class="text-danger"></span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

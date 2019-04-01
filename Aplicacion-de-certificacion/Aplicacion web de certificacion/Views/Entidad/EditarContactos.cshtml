@@ -1,0 +1,74 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Contacto
+
+@{
+    Layout = null;
+    ViewData["Title"] = "EditarContactos";
+}
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="box corner-all">
+        <!--box body-->
+        <div class="panel-body">
+            <div class="row-fluid">
+                <!--element-->
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div class="row">
+                            <div class="col-md-5">
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="form-group">
+                                    <label asp-for="ContactoRepresentanteLegal" class="control-label">Nombre Representante</label>
+                                    <input asp-for="ContactoRepresentanteLegal" class="form-control" />
+                                    <span asp-validation-for="ContactoRepresentanteLegal" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ApellidoRepresentante" class="control-label">Apellido</label>
+                                    <input asp-for="ApellidoRepresentante" class="form-control" />
+                                    <span asp-validation-for="ApellidoRepresentante" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TelefonoRepresentante" class="control-label">Teléfono</label>
+                                    <input asp-for="TelefonoRepresentante" class="form-control" />
+                                    <span asp-validation-for="TelefonoRepresentante" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                            <div class="col-md-1">
+                                <input asp-for="IdContactoEntidad" class="form-control" contenteditable="false" type="hidden" />
+                                <input asp-for="Entidades_IdEntidades" class="form-control" contenteditable="false" type="hidden" />
+                            </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label asp-for="EmailRepresentante" class="control-label">Email</label>
+                                        <input asp-for="EmailRepresentante" class="form-control" />
+                                        <span asp-validation-for="EmailRepresentante" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="ServicioTecnico" class="control-label">Servicio Técnico</label>
+                                        <input asp-for="ServicioTecnico" class="form-control" />
+                                        <span asp-validation-for="ServicioTecnico" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Direccion" class="control-label">Dirección</label>
+                                        <input asp-for="Direccion" class="form-control" />
+                                        <span asp-validation-for="Direccion" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

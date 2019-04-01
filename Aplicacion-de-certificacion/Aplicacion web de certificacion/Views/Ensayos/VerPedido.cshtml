@@ -1,0 +1,59 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Ensayos
+
+@{
+    ViewData["Title"] = "VerPedido";
+}
+<body>
+    <table style="width:100%">
+        <tbody>
+            <tr>
+                <td style="width:20%"><center><img src="http://sistema.lenor.com.ar:88/image/logo2.jpg"></center></td>
+                <td><b>Pedido de ensayos</b></td>
+
+            </tr>
+            <tr><td colspan="3">Lenor Chile Ltda., Organismo de Certificación de productos, solicita la realización de los ensayos según el detalle que se indica a continuación</td></tr>
+        </tbody>
+    </table>
+    <br><table style="width:100%" border="1">
+        <tbody>
+            <tr><td width="40%">Número de pedido</td><td>T @Model.PedidoEnsayoLista[0].IdPedidoEnsayo</td></tr>
+            <tr><td width="40%">Fecha de pedido</td><td>@Model.FechaPedido</td></tr>
+            <tr><td width="40%">Laboratorio designado</td><td>Lenor Chile SpA</td></tr>
+            <tr><td width="40%">Nombre del cliente</td><td>@Model.EntidadesLista[0].RazonSocial</td></tr>
+            <tr><td width="40%">Dirección del cliente</td><td>@Model.EntidadesLista[0].Domicilio</td></tr>
+            <tr><td width="40%">Nombre de fábrica</td><td>@Model.ProductosLista[0].NombreFabricante</td></tr>
+            <tr><td width="40%">Dirección de la fábrica</td><td>@Model.ProductosLista[0].DireccionFabricante  </td></tr>
+            <tr><td width="40%">Protocolo aplicable</td><td>@Model.PedidoEnsayoLista[0].ProtocoloAplicable</td></tr>
+            <tr><td width="40%">Condiciones particulares de ensayo</td><td>@Model.PedidoEnsayoLista[0].CondicionesDeEnsayo</td></tr>
+        </tbody>
+    </table><br><b>Detalles de las muestras a tomar</b>
+    <table style="width:100%" border="1">
+        <tbody>
+            <tr>
+                <td align="center"><b>Muestra N°</b></td>
+                <td align="center"><b>Descripción</b></td>
+                <td align="center"><b>Marca</b></td>
+                <td align="center"><b>Modelo</b></td>
+                <td align="center"><b>Protocolo</b></td>
+                <td align="center"><b>Norma</b></td>
+                <td align="center"><b>Comentario</b></td>
+            </tr>
+            <tr>
+                <td align="center">@Model.MuestrasLista[0].Etiqueta</td>
+                <td align="center">@Model.MuestrasLista[0].Producto</td>
+                <td align="center">	@Model.MuestrasLista[0].Marca</td>
+                <td align="center">@Model.MuestrasLista[0].Modelo</td>
+                <td align="center">@Model.PedidoEnsayoLista[0].ProtocoloAplicable</td>
+                <td align="center">@Model.ProductosLista[0].NormaProducto</td>
+                <td align="center">@Model.PedidoEnsayoLista[0].Comentarios</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><table style="width:100%" border="1">
+        <tbody>
+            <tr><td width="40%">Cantidad total de muestras enviadas al laboratorio</td><td>@Model.MuestrasLista[0].Cantidad</td></tr>
+            <tr><td width="40%">Destino final de las muestras</td><td>@Model.MuestrasLista[0].DestinoMuestras</td></tr>
+            <tr><td width="40%">Pedido preparado por</td><td>@Model.PedidoEnsayoLista[0].AutorPedido</td></tr>
+        </tbody>
+    </table>
+</body>

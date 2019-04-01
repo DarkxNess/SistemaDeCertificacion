@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion_web_de_certificacion", "Aplicacion web de certificacion\Aplicacion_web_de_certificacion.csproj", "{9459EB19-279B-4F09-A414-43DF7C18E9A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9459EB19-279B-4F09-A414-43DF7C18E9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9459EB19-279B-4F09-A414-43DF7C18E9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9459EB19-279B-4F09-A414-43DF7C18E9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9459EB19-279B-4F09-A414-43DF7C18E9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3A7EAED-ABCB-48AB-BEBF-CA3AD1223007}
+	EndGlobalSection
+EndGlobal

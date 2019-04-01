@@ -1,0 +1,251 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Presupuesto
+@{
+
+    ViewData["Title"] = "PlantillaPresupuesto";
+    Double condiconIVAx = 0;
+    String noIndica = "No Indica";
+    Double IVANumero=0;
+    Double IVA=0;
+    Double total=0;
+    Double SubTotalxx = 0;
+}
+
+<div class="span12 bg-white" style="border:1px solid gray;padding:5px;">
+    <div id="invoice-container" class="invoice-container">
+        <div style="text-align: center; padding-bottom: 9px; margin: 10px 0 10px; border-bottom: 1px solid #eeeeee;">
+
+            <div class="pull-left"><img width="125" height="80" src="~/images/lenor.jpg" /></div>
+
+            <h1 >Presupuesto # @Model.IdPresupuestos </h1>
+
+        </div>
+        <div class="row-fluid">
+            <table style="width:100%" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            @{  String FechaCreacion = Model.FechaCreacion.Day + "-" + Model.FechaCreacion.Month + "-" + Model.FechaCreacion.Year; }
+                            <div class="" style="font-size:14px">
+                                <p class="muted bold">Cliente</p>
+                                <p>Fecha: @FechaCreacion</p>
+                                <p>@Model.Cliente</p>
+                    
+                                <p>
+                                    Cond. I.V.A.:                                                                         @if (Model.CotizacionesLista.Count > 0)
+                                        {
+                                            @Model.CotizacionesLista[0].IVA
+                                        }
+                                        else
+                                        {
+                                            @condiconIVAx;
+
+                                        }
+                                     %
+                                </p>
+                                <p>@Model.CondicionVenta</p>
+                                <p>Domicilio: @Model.EntidadesLista[0].Domicilio, @Model.EntidadesLista[0].Ciudad, @Model.EntidadesLista[0].Pais</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="" style="font-size:14px">
+                                <p class="muted bold">Contacto</p>
+                                <p> @Model.ContactosLista[0].ContactoRepresentanteLegal 
+                                @Model.ContactosLista[0].ApellidoRepresentante</p>
+                                <p>Telefono: @Model.ContactosLista[0].TelefonoRepresentante</p>
+                                <p>Email: <a href="@Model.ContactosLista[0].EmailRepresentante">@Model.ContactosLista[0].EmailRepresentante</a></p>
+                                <p>Comercial: @Model.ComercialAsignado </p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="container" style="float:right"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <div class="invoice-table">
+            <table class="table table-bordered invoice responsive">
+                <thead>
+                    <tr>
+                        <th>SERVICIO / Condición Venta</th>
+                        <th>PRODUCTO / MARCA / MODELO / FAMILIA</th>
+                        <th>IVA %</th>
+                        <th>SUBTOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            @if (Model.CotizacionesLista.Count > 0)
+                                {
+                                    @Model.CotizacionesLista[0].NombreCotizacion  }
+                                else
+                                {
+                                   @noIndica;
+                                }
+                               / @Model.EntidadesLista[0].CondicionVenta
+
+                        </td>
+                        <td>
+                            @Model.ProductosLista[0].NombreProducto / @Model.ProductosLista[0].MarcaProducto / @Model.ProductosLista[0].ModeloProducto / @Model.ProductosLista[0].NumeroSerieProducto <br>
+                            <b>Normas:</b><br>
+                                          <span>@Model.ProductosLista[0].NormaProducto </span><br>
+                        </td>
+                        <td class="right">
+                            @if (Model.CotizacionesLista.Count > 0)
+                            {
+                                    @Model.CotizacionesLista[0].IVA }
+                            else
+                            {
+                                @IVANumero;
+                            }
+                        
+
+                        </td>
+
+                        <td class="right">
+                            UF
+                            @if (Model.CotizacionesLista.Count > 0) { 
+                                @Model.CotizacionesLista[0].SubTotal
+                            }
+                            else
+                            {
+                                @SubTotalxx;
+
+                            }
+                            </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="5">Totales</th>
+                    </tr> 
+                    <tr>
+                        <td colspan="2">Subtotal sin I.V.A.</td>
+                        <td colspan="3" class="right">
+                            UF
+                            @if (Model.CotizacionesLista.Count > 0)
+                            {
+                                @Model.CotizacionesLista[0].SubTotal
+                            }
+                            else { @SubTotalxx
+                            }
+                        
+                        </td>
+                    </tr>
+                    
+                       @if (Model.CotizacionesLista.Count > 0)
+                        {
+                            IVANumero = Model.CotizacionesLista[0].IVA / 100;
+                            IVA = (@Model.CotizacionesLista[0].SubTotal * IVANumero);
+                            total = @Model.CotizacionesLista[0].SubTotal + IVA;
+                        }
+                      
+                    
+                            <tr>
+                                <td colspan="2">I.V.A</td>
+                                <td colspan="3" class="right"> @IVA </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Total</td>
+                                <td colspan="3" class="right">
+
+                                    UF @total
+                                </td>
+                            </tr>
+                        </tfoot>
+            </table>
+        </div>
+        <div class="row-fluid">
+            <div class="alert alert-info">
+                <b>Observaciones: </b>
+                <div class="row-fluid">
+                    <div class="span12 text-center">
+                        <span class="bold">Intervino: Area Comercial</span>
+                        <span> @Model.ComercialAsignado </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <table id="paises" style="width:100%; line-height:10px" class="table table-bordered helper-font-small">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>Lenor Argentina</span>
+                            <p>
+                                Fraga 981<br>
+                                Buenos Aires<br>
+                                T. +54-11-4555-4001<br>
+                                F. +54-11-4555-4363<br>
+                                info@lenor.com.ar<br>
+                            </p>
+                        </td>
+
+                        <td>
+                            <span>Lenor Chile</span>
+                            <p>
+                                Ventura Lavalle Nº 681<br>
+                                Comuna de Santiago<br>
+                                Santiago de Chile<br>
+                                T.+ 56 2 2556 3894<br>
+                            </p>
+                        </td>
+
+                        <td>
+                            <span>Lenor Asia</span>
+                            <p>
+                                Suite 1804. NewPoly<br>
+                                Tower. Zhongshan Road Six,<br>
+                                Yuexiu District, Guangzhou,<br>
+                                Guangdong province, China<br>
+                                T.+86-20-8326 6678<br>
+                                +86-20-8326 6681<br>
+                            </p>
+                        </td>
+
+                        <td>
+                            <span>Lenor Colombia</span>
+                            <p>
+                                Cra. 47 A No 96-41 Of. 204<br>
+                                Edificio Bussines Point,<br>
+                                Bogotá D.C.<br>
+                                T.&nbsp;2 96 07 37<br>
+                                Cel. +57 317 4 39 98 54
+                            </p>
+                        </td>
+
+                        <td>
+                            <span>Lenor Ecuador</span>
+                            <p>
+                                Mariana de Jesús E78 <br>
+                                y La Pradera,<br>
+                                Quito, Ecuador<br>
+                                T. 593 2905487<br>
+                                INFO@LENOR.EC
+                            </p>
+                        </td>
+
+                        <td>
+                            <span>USA</span>
+                            <p>
+                                PMB 826, 18160<br>
+                                Cottonwood Road<br>
+                                Sunriver, Oregon 97707 USA<br>
+                                tel (866) 331-0001<br>
+                                cell (541) 678-3271<br>
+                                T.+ 1 866 331 0001<br>
+                            </p>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

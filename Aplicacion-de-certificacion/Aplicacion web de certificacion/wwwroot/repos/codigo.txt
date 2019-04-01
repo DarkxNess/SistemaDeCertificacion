@@ -1,0 +1,98 @@
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Finanzas</th>
+                  <th>Roles</th>
+                  <th>Perfil</th>
+                  <th>Acciones</th>                  
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Finanzas</th>
+                  <th>Roles</th>
+                  <th>Perfil</th>
+                  <th>Acciones</th>
+                </tr>
+              </tfoot>
+              <tbody>
+
+                <%=getWhileLoopData()%>
+                
+              </tbody>
+            </table>
+
+
+public string getWhileLoopData()
+    {
+        string htmlStr = "";
+    MySqlConnection connection = new MySqlConnection("Database=mydb;Data Source=localhost;User Id=root");
+    connection.Open();
+
+    MySqlCommand command =  connection.CreateCommand();
+    command.CommandText = "select * from usuarios";
+    MySqlDataReader reader = command.ExecuteReader();
+
+        while (reader.Read())
+        {
+            int id = reader.GetInt32(0);
+            string usuario = reader.GetString(1);
+            string pass = reader.GetString(2);
+            string fecha = (reader.GetDateTime(3)).ToString();
+            string nombre = reader.GetString(4);
+            string apellido = reader.GetString(5);
+            string mail = reader.GetString(6);
+            string foto = reader.GetString(7);
+            //bool subjefe = reader.GetBoolean(8);
+            string subjefe = "";
+            if (reader.GetInt32(8) == 1)
+            {
+                subjefe = "<br />Sub-Jefe de Laboratorio";
+            }
+
+            string finanzas = "NO";
+            if (reader.GetInt32(9) == 1)
+            {
+                finanzas = "SI";
+            }
+
+            string jefe = "";
+            if (reader.GetInt32(10) == 1)
+            {
+                jefe = "Jefe de Laboratorio";
+            }
+
+            string tecnico = "";
+            if (reader.GetInt32(11) == 1)
+            {
+                tecnico = "<br />Técnico de Laboratorio";
+            }
+
+            string revisor = "";
+            if (reader.GetInt32(12) == 1)
+            {
+                revisor = "Revisor Técnico";
+            }
+
+            string ingreso = "";
+            if (reader.GetInt32(13) == 1)
+            {
+                ingreso = "Ingresos";
+            }
+
+            string medidor = "";
+            if (reader.GetInt32(14) == 1)
+            {
+                medidor = "Ensayos";
+            }
+
+            htmlStr += "<tr><td> <img src=" + foto + " width='25%' height='25%' alt=''/></td><td>" + usuario + "<br />" + nombre.ToUpper() + " " + apellido.ToUpper() + "</td><td>" + finanzas + "</td><td>" + jefe + subjefe + tecnico +"</td><td> " + revisor + " " + ingreso + " " + medidor +" </td><td><a class='btn btn-primary btn-block' href='formusuario.html'>Editar</a><br /> </td></tr>";                   
+        }
+
+        connection.Close();
+        return htmlStr;
+    }

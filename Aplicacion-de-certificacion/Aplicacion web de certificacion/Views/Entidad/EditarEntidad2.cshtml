@@ -1,0 +1,290 @@
+﻿@model Aplicacion_web_de_certificacion.Models.Entidades
+
+@{
+    ViewData["Title"] = "EditarEntidad2";
+
+}
+
+<div class="panel panel-primary" style="">
+    <!--box header-->
+    <div class="panel-heading">
+        <h3>Información de la Entidad</h3>
+    </div><!--/box header-->
+
+
+    <div class="row-fluid">
+        <div class="span12">
+            <form action="Modificar" class="form-horizontal" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="box corner-all">
+                    <!--box body-->
+                    <div class="panel-body">
+                        <div class="row-fluid">
+                            <!--element-->
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="row-fluid">
+                                        <div class="col-md-4">
+                                            <div class="editor-label">
+                                                <label asp-for="RazonSocial" class="control-label">Razón Social</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="RazonSocial" class="form-control" />
+                                                <span asp-validation-for="RazonSocial" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="RutEntidad" class="control-label">Rut</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="RutEntidad" class="form-control" />
+                                                <span asp-validation-for="RutEntidad" class="text-danger"></span>
+
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="RepresentanteLegal" class="control-label">Representante Legal</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="RepresentanteLegal" class="form-control" />
+                                                <span asp-validation-for="RepresentanteLegal" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="RutRepresentanteLegal" class="control-label">Rut Representante Legal</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="RutRepresentanteLegal" class="form-control" />
+                                                <span asp-validation-for="RutRepresentanteLegal" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="InicioActividad" class="control-label">Inicio Actividad</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="InicioActividad" class="form-control" />
+                                                <span asp-validation-for="InicioActividad" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-4">
+                                            <div class="editor-label">
+                                                <label asp-for="TipoEntidad" class="control-label">Tipo Entidad</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="TipoEntidad" class="form-control" />
+                                                <span asp-validation-for="TipoEntidad" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="CondicionVenta" class="control-label">Condición Venta</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="CondicionVenta" class="form-control" />
+                                                <span asp-validation-for="CondicionVenta" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="SegmentoVenta" class="control-label">Segmento Venta</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="SegmentoVenta" class="form-control" />
+                                                <span asp-validation-for="SegmentoVenta" class="text-danger"></span>
+                                            </div>
+
+                                        </div>
+
+
+
+
+                                        <div class="col-md-4">
+                                            <div class="editor-label">
+                                                <label asp-for="Domicilio" class="control-label">Domicilio</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="Domicilio" class="form-control" />
+                                                <span asp-validation-for="Domicilio" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="Pais" class="control-label">País</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="Pais" class="form-control" />
+                                                <span asp-validation-for="Pais" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="editor-label">
+                                                <label asp-for="Ciudad" class="control-label">Ciudad</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="Ciudad" class="form-control" />
+                                                <span asp-validation-for="Ciudad" class="text-danger"></span>
+                                            </div>
+                                            <div class="editor-label">
+                                                <label asp-for="Localidad" class="control-label">Localidad</label>
+                                            </div>
+                                            <div class="editor-field">
+                                                <input asp-for="Localidad" class="form-control" />
+                                                <span asp-validation-for="Localidad" class="text-danger"></span>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row-fluid">
+                                <div class="">
+                                    <fieldset>
+                                        <legend>Contactos de la Empresa</legend>
+
+
+                                        <div id="grid-contacto">
+                                            <div class="row-fluid">
+                                                <!--element-->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="row-fluid">
+                                                            <div class="col-md-12">
+                                                                <table class="table table-responsive table-striped table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Editar</th>
+                                                                            <th>
+                                                                                Id
+                                                                            </th>
+                                                                            <th>
+                                                                                Nombre Representante
+                                                                            </th>
+
+                                                                            <th>
+                                                                                Apellido
+                                                                            </th>
+                                                                            <th>
+                                                                                Teléfono
+                                                                            </th>
+                                                                            <th>
+                                                                                Email
+                                                                            </th>
+
+                                                                            <th>
+                                                                                Servicio Técnico
+                                                                            </th>
+                                                                            <th>
+                                                                                Dirección
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item in Model.ContactosLista)
+                                                                        {
+                                                                            <tr>
+                                                                                <td class="success">
+
+                                                                                    <button type="button" id="btnNuevo" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-id="@item.IdContactoEntidad">Open Modal</button>
+
+
+
+                                                                                </td>
+
+                                                                                <td class="active">
+                                                                                    @Html.DisplayFor(modelItem => item.IdContactoEntidad)
+                                                                                </td>
+                                                                                <td class="active">
+                                                                                    @Html.DisplayFor(modelItem => item.ContactoRepresentanteLegal)
+                                                                                </td>
+
+                                                                                <td class="">
+                                                                                    @Html.DisplayFor(modelItem => item.ApellidoRepresentante)
+                                                                                </td>
+
+                                                                                <td class="active">
+                                                                                    @Html.DisplayFor(modelItem => item.TelefonoRepresentante)
+                                                                                </td>
+
+                                                                                <td class="">
+                                                                                    @Html.DisplayFor(modelItem => item.EmailRepresentante)
+                                                                                </td>
+
+                                                                                <td class="active">
+                                                                                    @Html.DisplayFor(modelItem => item.ServicioTecnico)
+                                                                                </td>
+                                                                                <td class="">
+                                                                                    @Html.DisplayFor(modelItem => item.Direccion)
+                                                                                </td>
+
+                                                                            </tr>
+                                                                        }
+                                                                    </tbody>
+                                                                </table>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <div class="pull-right">
+                                    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                                </div>
+                            </div>
+
+                            <!--/element-->
+                        </div>
+                    </div><!--/box body-->
+                </div>
+                <input asp-for="IdEntidades" class="form-control" contenteditable="false" type="hidden" />
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Editar Contacto</h4>
+            </div>
+            <form asp-action="ModificarContacto" class="form-horizontal" method="post">
+                <div class="modal-body">
+
+                    <div id="modal-content">
+
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script src="~/js/EditarContactos.js"></script>
+
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
