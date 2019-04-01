@@ -277,6 +277,7 @@ namespace Aplicacion_web_de_certificacion.Controllers
             String str2 = model.Password;
             bool upper = false;
             bool number = false;
+            bool caracter = false;
             for (int n = 0; n < str2.Length; n++)
             {
                 if (char.IsUpper(str2[n]))
@@ -290,9 +291,15 @@ namespace Aplicacion_web_de_certificacion.Controllers
                     number = true;
                 }
 
+
+                if (char.IsSymbol(str2[n]) || char.IsPunctuation(str2[n]) || char.IsSeparator(str2[n]))
+                {
+                    caracter = true;
+                }
+
             }
 
-            if (ModelState.IsValid && number.Equals(true) && upper.Equals(true))
+            if (ModelState.IsValid && number.Equals(true) && upper.Equals(true) && caracter.Equals(true))
             {
                 String str = model.Email;
                 String username = "";
